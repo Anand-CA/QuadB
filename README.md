@@ -1,3 +1,16 @@
+## About
+A Movie-app made using React.js for learning purpose.
+
+## Technologies used 🚀
+* [React.js](https://reactjs.org/)
+* [StyledComponents](https://styled-components.com/)
+* [TvMaze](https://www.tvmaze.com/api)
+
+## External Library
+* [React HTML Parser](https://www.npmjs.com/package/react-html-parser)
+* [Axios](https://www.npmjs.com/package/axios)
+* [React router dom](https://www.npmjs.com/package/react-router-dom)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts

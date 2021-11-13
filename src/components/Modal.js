@@ -77,6 +77,17 @@ const Container = styled.div`
     position: relative;
     width: fit-content;
     margin: 0 auto;
+    background: linear-gradient(
+      270.97deg,
+      #ffe580 -21.36%,
+      #ff7571 -2.45%,
+      #ea5dad 26.84%,
+      #c2a0fd 64.15%,
+      #3bf0e4 108.29%,
+      #b2f4b6 159.03%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 1.5em;
     @media (max-width: 600px) {
       font-size: 1.5rem;
@@ -124,11 +135,12 @@ const Container = styled.div`
       padding: 1.5rem;
       width: 30%;
       margin-bottom: 2em;
+      border: none;
       margin-inline: auto;
-      border: 3px solid #00ed82;
-      border-radius: 0.3rem;
+      outline: 3px solid #fcfcfc;
+      color: #fcfcfc;
       background: transparent;
-      color: #00ed82;
+      border-radius: 0.3rem;
       font-size: 1.1rem;
       font-weight: bold;
       cursor: pointer;
@@ -139,8 +151,17 @@ const Container = styled.div`
         padding: 0.7rem;
       }
       &:hover {
-        background: #00ed82;
+        background: linear-gradient(
+          570.97deg,
+          #ffe580 -21.36%,
+          #ff7571 -2.45%,
+          #ea5dad 26.84%,
+          #c2a0fd 64.15%,
+          #3bf0e4 108.29%,
+          #b2f4b6 159.03%
+        );
         color: #000;
+        outline: none;
       }
     }
   }

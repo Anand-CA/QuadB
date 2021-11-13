@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import styled, { keyframes } from "styled-components";
 import ReactHtmlParser from "react-html-parser";
-import StarRatings from "react-star-ratings";
 import Modal from "../components/Modal";
 
 const Detail = () => {
