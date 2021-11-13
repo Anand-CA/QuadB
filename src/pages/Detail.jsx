@@ -116,11 +116,24 @@ const Content = styled.div`
     font-size: 5rem;
     margin-bottom: 1rem;
     animation: ${fadeIn} 0.5s ease-in-out;
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
   }
   p {
     font-size: 1.4rem;
     animation: ${fadeIn} 0.5s ease-in-out;
     max-width: 60rem;
+    @media (max-width: 768px) {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+    }
+    @media (max-width: 600px) {
+      font-size: 1rem;
+      line-height: 1.5em;
+    }
   }
   button {
     padding: 1rem 2rem;
@@ -152,9 +165,15 @@ const Star = styled.div`
   }
   svg {
     height: 2.5rem;
+    @media (max-width: 600px) {
+      height: 1.7rem;
+    }
   }
   span {
     font-size: 1.4rem;
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -170,19 +189,29 @@ const Genres = styled.div`
     span {
       font-size: 1.4rem;
       margin-left: 0.5rem;
+      @media (max-width: 600px) {
+        font-size: 1rem;
+      }
     }
   }
 `;
 
 const Language = styled.div`
   display: flex;
+  margin-top: 0.5em;
   align-items: center;
   padding: 0.2rem 0 3rem 0;
   svg {
     height: 1.7rem;
+    @media (max-width: 600px) {
+      height: 1.4rem;
+    }
   }
   p {
     font-size: 1.2rem;
     margin-left: 0.3rem;
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
 `;

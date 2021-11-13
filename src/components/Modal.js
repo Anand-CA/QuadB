@@ -25,8 +25,13 @@ const Modal = ({ showModal, setShowModal }) => {
         <h1>Book Your Ticket</h1>
 
         <form>
-          <input type="email" placeholder="Email *" />
-          <input type="password" placeholder="Password *" />
+          <input type="email" placeholder="Email *" required />
+          <input
+            type="password"
+            minlength="6"
+            placeholder="Password *"
+            required
+          />
           <button>Book Now!</button>
         </form>
       </Container>
@@ -60,7 +65,7 @@ const fadeIn = keyframes`
     }
 `;
 const Container = styled.div`
-  height: 80%;
+  height: fit-content;
   width: min(90%, 55rem);
   background: rgba(0, 0, 0, 0.9);
   border-radius: 1rem;
@@ -73,6 +78,9 @@ const Container = styled.div`
     width: fit-content;
     margin: 0 auto;
     margin-bottom: 1.5em;
+    @media (max-width: 600px) {
+      font-size: 1.5rem;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -88,19 +96,34 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     input {
-      margin: 1em 4em;
+      margin: 1em auto;
       background: rgba(0, 0, 0, 0.5);
       outline: none;
       color: #fff;
+      width: min(90%, 45rem);
       font-size: 1.4rem;
       border-radius: 0.3rem;
       padding: 1.5rem;
       border: 2px solid #fcfcfc;
+      @media (max-width: 600px) {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+      &:invalid:required {
+        border: 2px solid red;
+        color: red;
+      }
+      &:invalid {
+        border: 2px solid red;
+        color: red;
+      }
     }
+
     button {
       margin-top: 2rem;
       padding: 1.5rem;
       width: 30%;
+      margin-bottom: 2em;
       margin-inline: auto;
       border: 3px solid #00ed82;
       border-radius: 0.3rem;
@@ -111,6 +134,10 @@ const Container = styled.div`
       cursor: pointer;
       font-family: "Rubik", sans-serif;
       transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+      @media (max-width: 600px) {
+        font-size: 0.8rem;
+        padding: 0.7rem;
+      }
       &:hover {
         background: #00ed82;
         color: #000;
@@ -126,5 +153,11 @@ const CloseBtn = styled.div`
     color: #fff;
     height: 2.4rem;
     cursor: pointer;
+  }
+  @media (max-width: 600px) {
+    padding: 0.8rem;
+    svg {
+      height: 1.5rem;
+    }
   }
 `;

@@ -14,11 +14,12 @@ const Home = () => {
   return (
     <Container>
       <Head>
-        <p>2021 MOVIES INCLUDED</p>
-        <h1>Find your favorite movies here !</h1>
+        <p>50% OFF INCLUDED</p>
+        <h1>Book your favorite movies here !</h1>
         <h4>
-          Stream full seasons of exclusive series, current-season episodes, hit
-          movies, Hulu Originals, kids shows, and more.
+          A film is - or should be - more like music than like fiction. It
+          should be a progression of moods and feelings. The theme, what's
+          behind the emotion, the meaning, all that comes later.
         </h4>
       </Head>
 
@@ -49,7 +50,14 @@ const Container = styled.div``;
 // section 1
 const Head = styled.div`
   text-align: center;
-  padding: 2rem 1rem 4rem 1rem;
+  width: min(95%, 50rem);
+  margin-inline: auto;
+  padding: 3rem 0;
+  @media (max-width: 600px) {
+    p {
+      font-size: 0.8em;
+    }
+  }
   * + * {
     margin-top: 0.8rem;
   }
@@ -59,12 +67,17 @@ const Head = styled.div`
   h1 {
     font-size: 48px;
     font-weight: 800;
+    @media (max-width: 600px) {
+      font-size: 1.9em;
+    }
   }
   h4 {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    /* margin-bottom: 5em; */
+    @media (max-width: 600px) {
+      font-size: 1em;
+    }
   }
 `;
 
@@ -73,13 +86,14 @@ const Grid = styled.div`
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  width: min(95%, 80rem);
+  width: min(93%, 80rem);
   margin: 0 auto;
   padding: 2rem 0;
   @media (max-width: 1085px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   @media (max-width: 600px) {
+    grid-gap: 1rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 `;
