@@ -30,10 +30,10 @@ const Home = () => {
           >
             <Card>
               <img src={movie.show.image.medium} alt="movie" />
-              <CardContent>
+              {/* <CardContent>
                 <h4>{movie.show.name}</h4>
                 <p>⭐⭐⭐⭐</p>
-              </CardContent>
+              </CardContent> */}
             </Card>
           </Link>
         ))}
@@ -49,7 +49,7 @@ const Container = styled.div``;
 // section 1
 const Head = styled.div`
   text-align: center;
-  padding: 2rem 1rem 5rem 1rem;
+  padding: 2rem 1rem 4rem 1rem;
   * + * {
     margin-top: 0.8rem;
   }
@@ -75,12 +75,32 @@ const Grid = styled.div`
   grid-template-columns: repeat(5, minmax(0, 1fr));
   width: min(95%, 80rem);
   margin: 0 auto;
+  padding: 2rem 0;
+  @media (max-width: 1085px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 `;
 const Card = styled.div`
   cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  &:hover {
+    transform: scaleX(1.1) scaleY(1.1);
+    img {
+      opacity: 0.5;
+    }
+  }
+  &:active {
+    transform: scaleX(0.9) scaleY(0.9);
+  }
   img {
     object-fit: cover;
     width: 100%;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   }
 `;
 const CardContent = styled.div``;
